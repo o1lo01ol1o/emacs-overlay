@@ -90,7 +90,7 @@ let
 
   emacsUnstable = (mkGitEmacs "emacs-unstable" ./repos/emacs/emacs-unstable.json { });
   
-  emacsPgtkGccUnstable = mkPgtkEmacs "emacs-pgtkgcc" ./repos/emacs/emacs-unstable.json { nativeComp = true; withSQLite3 = true; };
+  emacsPgtkGccUnstable = mkPgtkEmacs "emacs-pgtkgcc-unstable" ./repos/emacs/emacs-unstable.json { nativeComp = true; withSQLite3 = true; };
 
 in
 {
