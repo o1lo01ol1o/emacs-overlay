@@ -89,6 +89,8 @@ let
   emacsPgtkGcc = mkPgtkEmacs "emacs-pgtkgcc" ./repos/emacs/emacs-master.json { nativeComp = true; withSQLite3 = true; };
 
   emacsUnstable = (mkGitEmacs "emacs-unstable" ./repos/emacs/emacs-unstable.json { });
+  
+  emacsPgtkGccUnstable = mkPgtkEmacs "emacs-pgtkgcc" ./repos/emacs/emacs-unstable.json { nativeComp = true; withSQLite3 = true; };
 
 in
 {
@@ -96,7 +98,7 @@ in
 
   inherit emacsGcc;
 
-  inherit emacsPgtk emacsPgtkGcc;
+  inherit emacsPgtk emacsPgtkGcc emacsPgtkGccUnstable;
 
   emacsGit-nox = (
     (
